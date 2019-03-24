@@ -1,0 +1,500 @@
+   31                          trigger: 'axis',
+   32                          axisPointer: {
+   33                              type: 'shadow'
+   34                          }
+   35                      },
+   36                      legend: {
+   37                          data: ['2011年', '2012年']
+   38                      },
+   39                      grid: {
+   40                          left: '3%',
+   41                          right: '4%',
+   42                          bottom: '3%',
+   43                          containLabel: true
+   44                      },
+   45                      xAxis: {
+   46                          type: 'value',
+   47                          boundaryGap: [0, 0.01]
+   48                      },
+   49                      yAxis: {
+   50                          type: 'category',
+   51                          data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
+   52                      },
+   53                      series: [
+   54                          {                             name: '2011年',;                             type: 'bar',;                             data: [18203, 23489, 29034, 104970, 131744, 630230];                         },;                         {                             name: '2012年',;                             type: 'bar',;                             data: [19325, 23438, 31000, 121594, 134141, 681807];                         };                     ];                 });
+   55              },
+   56              drawLineChart() {                 this.chartLine = echarts.init(document.getElementById('chartLine'));
+   57                  this.chartLine.setOption({
+   58                      title: {
+   59                          text: 'Line Chart'
+   60                      },
+   61                      tooltip: {
+   62                          trigger: 'axis'
+   63                      },
+   64                      legend: {
+   65                          data: ['邮件营销', '联盟广告', '搜索引擎']
+   66                      },
+   67                      grid: {
+   68                          left: '3%',
+   69                          right: '4%',
+   70                          bottom: '3%',
+   71                          containLabel: true
+   72                      },
+   73                      xAxis: {
+   74                          type: 'category',
+   75                          boundaryGap: false,
+   76                          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+   77                      },
+   78                      yAxis: {
+   79                          type: 'value'
+   80                      },
+   81                      series: [
+   82                          {                             name: '邮件营销',;                             type: 'line',;                             stack: '总量',;                             data: [120, 132, 101, 134, 90, 230, 210];                         },;                         {                             name: '联盟广告',;                             type: 'line',;                             stack: '总量',;                             data: [220, 182, 191, 234, 290, 330, 310];                         },;                         {                             name: '搜索引擎',;                             type: 'line',;                             stack: '总量',;                             data: [820, 932, 901, 934, 1290, 1330, 1320];                         };                     ];                 });
+   83              },
+   84              drawPieChart() {                 this.chartPie = echarts.init(document.getElementById('chartPie'));
+   85                  this.chartPie.setOption({
+   86                      title: {
+   87                          text: 'Pie Chart',
+   88                          subtext: '纯属虚构',
+   89                          x: 'center'
+   90                      },
+   91                      tooltip: {
+   92                          trigger: 'item',
+   93                          formatter: "{a} <br/>{b} : {c} ({d}%)"
+   94                      },
+   95                      legend: {
+   96                          orient: 'vertical',
+   97                          left: 'left',
+   98                          data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+   99                      },
+  100                      series: [
+  101                          {                             name: '访问来源',;                             type: 'pie',;                             radius: '55%',;                             center: ['50%', '60%'],;                             data: [;                                 { value: 335, name: '直接访问' },;                                 { value: 310, name: '邮件营销' },;                                 { value: 234, name: '联盟广告' },
+  102                                 { value: 135, name: '视频广告' },;                                 { value: 1548, name: '搜索引擎' };                             ],;                             itemStyle: {;                                 emphasis: {;                                     shadowBlur: 10,;                                     shadowOffsetX: 0,;                                     shadowColor: 'rgba(0, 0, 0, 0.5)';                                 };                             }
+  103                          }
+  104                      ]
+  105                  });
+  106              },
+  107              drawCharts() {                 this.drawColumnChart()                 this.drawBarChart()
+  108                  this.drawLineChart()                 this.drawPieChart()
+  109              },
+  110          },
+  111          mounted: function () {
+  112              this.drawCharts()         },
+  113          updated: function () {
+  114              this.drawCharts()
+  115  git romate add origin https://github.com/Cicada-lively/1lianshou
+  116  git remote add origin https://github.com/Cicada-lively/1lianshou
+  117  git push -u origin master
+  118  git remote add origin https://github.com/Cicada-lively/1lianshou
+  119  git push -u origin master
+  120  npm run dev
+  121  npm install element-ui -S
+  122  cnpm install element-ui -S
+  123  npm run dev
+  124  npm i element-ui -S
+  125  npm install element-ui -S
+  126  vue init webpack my-project
+  127  vd my-project
+  128  vd my-project
+  129  cd my-project
+  130  npm install
+  131  npm install element-ui -S
+  132  npm install
+  133  cnpm install
+  134  npm run dev
+  135  npm install mockjs -S
+  136  cnpm install mockjs -S
+  137  cnpm install axios-mock-adapter --save-dev
+  138  npm run dev
+  139  npm run dev
+  140  npm run dev
+  141  git clone https://github.com/bailicangdu/vue2-manage
+  142  cd vue2-manege
+  143  cd vue2-manage
+  144  cnpm install
+  145  npm run dev
+  146  cnpm install
+  147  npm run dev
+  148  git clone https://github.com/top-think/thinkphp
+  149  npm run dev
+  150  npm start
+  151  node server.js
+  152  node 1.js
+  153  node 2.js 
+  154  npm install -g babel
+  155  webpack
+  156  webpack
+  157  webpack
+  158  webpack
+  159  webpack
+  160  webpack
+  161  webpack
+  162  npm init
+  163  cnpm install express -D
+  164  node app.js
+  165  node app.js
+  166  node app.js
+  167  node app.js
+  168  node app.js
+  169  node app.js
+  170  node app.js
+  171  node app.js
+  172  node app.js
+  173  cnpm install body-parser -D
+  174  node app.js
+  175  node app.js
+  176  node app.js
+  177  node app.js
+  178  node app.js
+  179  node app.js
+  180  node app.js
+  181  node app.js
+  182  node app.js
+  183  node app.js
+  184  node app.js
+  185  node app.js
+  186  node app.js
+  187  node app.js
+  188  node app.js
+  189  cnpm init
+  190  npm init
+  191  cnpm install https://github.com/lybenson/bilibili-vue
+  192  git clone https://github.com/lybenson/bilibili-vue
+  193  cd bilibili-vue
+  194  cd bilibili-api
+  195  cnpm install
+  196  cnpm run dev
+  197  git add .
+  198  git commit -m "vue项目"
+  199  git push -u origin master
+  200  git init
+  201  git add .
+  202  git commit -m "xiangmu"
+  203  git remote add ori
+  204  git remote add origin git@github.com:Cicada-lively/new-demo.git
+  205  git push -u origin master
+  206  git push -u origin master
+  207  git push -u origin master
+  208  git push -u origin master
+  209  HBH12fx8sET2mFgH6ciAq+iEAPQdjNVgLSqhhgIU/6ds13PXHBPCoWnVmizDTNt4
+  210  ltpyDDlAU0MnCeBYMW+BVdaJePBj0pSLWRSsBSrqYQX7+bUsRuuz5/AUBbPCXARf
+  211  im8EjkjK+KFPxWZ1wZcc4eKcfWf8v8lO6Jjro9vxqNaETav6P5rCiNeBZM3WocYW
+  212  vOL0Gv7Ot1oc/QBh7g+J9+2BrxKT0pE+dABVKVP7re8W0nCzbl18ZgdyqSiFcSm2
+  213  LvnLm1uhsHQY5/ngY6YXHD+uUQEXRvrqguLQcvzxrJUETsfSlnBraEWDMtW0BvN7
+  214  5O7h0gSWL6XnF2QtnqedxQKCJj3mEiU0VOVyhA/rFzwvIx6o7WeIK/QvabKQaeJU
+  215  BwLWlEAvLQSdfkXuJxbhQir5fVxfqN7JlbZNevzbRuwf8DnHG+7880Npva2NSm0R
+  216  Bqky3y4lwgj5DO0Jn14XMO3GEVlpCwg8fW61WMZiO1ZyQB3wfqZ33NZnfbP/VWSy
+  217  y4IvdA2SxOQd8FD1PuTc2WDKoYc2b9as/4zUSn6/cc1uiBjtngDF27POD5r7S3HY
+  218  r3c9cGXbwbhVsmUZ3h86COO2QAWQJBIPy4Cx3ML3um4dXWuXKaU6SqctGOwzmWHt
+  219  1G80jYSUSIut8C99dasmWBQ8E/STlBr5DbQwj82DTk/HB0/bCKUCmVEveuJGCgil
+  220  UsM+1eJCf8e1Nr88Aqo9plxNqc52H4CL8rr8HcmKCTJWexSimiWoQ2U46sS56V1D
+  221  UXJJWZXd4EG+wBulWgO+0KddC4NksCAdxzjNc4geR/o0P2rRvTjL2+lc6UrCaxrk
+  222  ulu6nwTD+WIygKRonR/5MzNy9mJFA4mU+MqkEUYFc2EyWfmmi15XSoCtXLCiw/qJ
+  223  o2sHtKjwpIDbvXowKwq4joTYIB/E096tFDZrcZLWzfWQNMjk11Kzn9AQkd3l2NQs
+  224  30vKT/AT6KA7WPyUwmgFqoQ0tGxz5piT47rd8C8TrP6Xcqi3Ypq479zwbZSWHv0e
+  225  D+YO8o32oEHm07Um6I0lOtaS+GPvcL+a1O5vkT359l9jpRh2WwJ8aCOlQpi9qBY0
+  226  em0Q8k3FUcQvz4k8Khchg+edmOXhPuwqmZOzjuKc/4STyjtyJlgPODStQWk1g5+H
+  227  P3Scf7eWBioxLbB0FZK5xg40t9Kyftnc9/0QOPdeBnpy/I9NQHQdbf2Q+Oqkbaqa
+  228  c9YkAPIKSGwb1Jx2diAg1Q/XBofdXfXBTUJYSt4eYTgNz+Omty1WDmLMnB0hNiZt
+  229  1CzA1oZmfA55XblKF/IIv9Muo6y02Mf4n7NJnipCP8q8WvdUojSAyu/8igxbrwpJ
+  230  TU10wCvOoxjZNdZFUeh5e29ceOOMq+QJYTvyLptQBAzVnWzHZaXpWX9lhm8CTNyo
+  231  KXtN7DZEke3Mb1Ev+6hoD8nC7xUYagAz7ns3DyUd+BQ7SK/d2+YuEgTq3XzS2TSS
+  232  Db9g2ZkULKLXDcIvfZf3jPES6poNjJtlExXy0r0C+LRbmvbx1yjqJASBnbq8fmGO
+  233  wulKQ+Kue1N3GG0WDCByKfx08WqbBkRCxXBJO83ZDwIS2ur8ywc2T5GWu1tOi0BD
+  234  -----END RSA PRIVATE KEY-----
+  235  git push -u origin master
+  236  git push -u origin master
+  237  ssh-keygen -p
+  238   ssh-add -A
+  239  git push -u origin master
+  240  openssl rsa -in KEY -out NEW_KEY
+  241  git push -u origin master
+  242  git push -u origin master
+  243  git push -u origin master
+  244  ssh -add /Users/John/.ssh/id_ras
+  245  cnpm install -g weex-toolkit
+  246  weex -v
+  247  cnpm install -g weex-toolkit
+  248  weex -v
+  249  vue -v
+  250  cnpm install
+  251  weex -v
+  252  npm root -g
+  253  node
+  254  weex -v
+  255  npm uninstall -g weex-toolkit
+  256  weex create weex-project
+  257  weex
+  258  npm uninstall -g weex-toolkit
+  259  npm install -g weex-toolkit
+  260  weex -v
+  261  weex -v
+  262  npm uninstall weex-toolkit -g
+  263  cnpm install -g weex-toolkit
+  264  weex -v
+  265  npm -v
+  266  node -v
+  267  weex -v
+  268  cnpm uninstall -g weex-toolkit
+  269  npm install weex-toolkit -g
+  270  weex -v
+  271  npm uninstall -g weex-toolkit
+  272  npm start
+  273  ipconfig
+  274  https://github.com/zwwill/yanxuan-weex-demo
+  275  git clone https://github.com/zwwill/yanxuan-weex-demo
+  276  npm start
+  277  weex -v
+  278  weex create weex-demo
+  279  node serverUrl.js
+  280  Url {
+  281    protocol: 'http:',
+  282    slashes: true,
+  283    auth: null,
+  284    host: '192.168.19.160:8080',
+  285    port: '8080',
+  286    hostname: '192.168.19.160',
+  287    hash: null,
+  288    search: '?name=wangchan',
+  289    query: 'name=wangchan',
+  290    pathname: '/index.html',
+  291    path: '/index.html?name=wangchan',
+  292    href: 'http://192.168.19.160:8080/index.html?name=wangchan' }
+  293  node serverUrl,js
+  294  node serverUrl.js
+  295  Url {
+  296    protocol: 'http:',
+  297    slashes: true,
+  298    auth: null,
+  299    host: '192.168.19.160:8080',
+  300    port: '8080',
+  301    hostname: '192.168.19.160',
+  302    hash: null,
+  303    search: '?name=wangchan',
+  304    query: { name: 'wangchan' },
+  305    pathname: '/index.html',
+  306    path: '/index.html?name=wangchan',
+  307    href: 'http://192.168.19.160:8080/index.html?name=wangchan' }
+  308  node server.js
+  309  node server.js
+  310  node server.js
+  311  node server.js
+  312  supervisor ./bin/www
+  313  cd routes/
+  314  npm run dev
+  315  npm run dev
+  316  npm install less less-loader -D
+  317  git clone https://github.com/lin-xin/wxapp-mall
+  318  git clone https://github.com/honraytech/VueThink
+  319  git clone https://github.com/ericjjj/vms
+  320  git clone https://github.com/lanux/Vue-Admin
+  321  git clone https://github.com/lin-xin/vue-manage-system
+  322  npm install
+  323  npm run dev
+  324  npm install -S echarts
+  325  node api.js
+  326  express api.js
+  327  express api.js
+  328  npm init
+  329  npm install -S express.js
+  330  npm install express-static
+  331  node server.js
+  332  node server.js
+  333  node server.js
+  334  node server.js
+  335  node server.js
+  336  node server.js
+  337  node server.js
+  338  node server.js
+  339  node server.js
+  340  node server.js
+  341  node server.js
+  342  npm install ejs
+  343  npm init
+  344  npm install ejs
+  345  cnpm install ejs
+  346  cnpm install jade
+  347  node 1.js
+  348  node 1.js
+  349  npm install jade
+  350  cnpm install
+  351  cnpm install jade
+  352  node 1.js
+  353  git clone https://github.com/zhijunw/vue-tourism
+  354  git clone https://github.com/zhijunw/xssnode
+  355  npm run dev
+  356  git clone https://github.com/PanJiaChen/vueAdmin-template
+  357  cd vueAdmin-template/
+  358  npm install
+  359  npm run dev
+  360  npm start
+  361  npm install https://github.com/PanJiaChen/vueAdmin-template
+  362  git clone https://github.com/PanJiaChen/vueAdmin-template
+  363  git clone https://github.com/PanJiaChen/vue-admin-template
+  364  git clone https://github.com/PanJiaChen/vue-admin-template
+  365  git clone https://github.com/PanJiaChen/vue-element-admin
+  366  cd vue-element-admin/
+  367  cnpm install
+  368  vue create AmsWeb1
+  369  vue
+  370  npm install -g @vue/cli
+  371  npm install -g @vue/cli
+  372  npm install
+  373  cnpm install
+  374  npm run dev
+  375  npm run dev
+  376  git clone https://github.com/suixinsuo/AMSFront
+  377  npm install
+  378  cnpm install
+  379  npm run dev
+  380  git status
+  381  git add .
+  382  git status
+  383  git commit -a 'xiugai'
+  384  git commit -m '用户信息简单修改'
+  385  git push
+  386  npm run dev
+  387  npm run dev
+  388  git pull
+  389  git status
+  390  git diff
+  391  git add ./src/views/user/index.vue 
+  392  git commit -m
+  393  git status
+  394  git status
+  395  git add .
+  396  git status
+  397  git pull
+  398  npm run dev
+  399  npm run dev
+  400  git status
+  401  git status
+  402  git status
+  403  git status
+  404  git dif
+  405  git diff
+  406  git status
+  407  git add  ./src/views/user/index.vue 
+  408  git pull 
+  409  git status
+  410  git commit -m 'update'
+  411  git push
+  412  git status
+  413  git pull
+  414  npm start
+  415  npm start
+  416  git status 
+  417  vim .gitignore 
+  418  vim src/views/404.vue 
+  419  git commit -m 'update'
+  420  git push 
+  421  npm run dev
+  422  git add .
+  423  git status
+  424  git commit -m 'update'
+  425  git push
+  426  git pull
+  427  git clone git@github.com:suixinsuo/AMSFront.git
+  428  git clone git@github.com:suixinsuo/AMSFront.git
+  429  git clone https://github.com/suixinsuo/AMSFront
+  430  git clone https://github.com/suixinsuo/AMSFront.git
+  431  git clone git@github.com:suixinsuo/AMSFront.git
+  432  git clone git@github.com:suixinsuo/AMSFront.git
+  433  git clone https://github.com/suixinsuo/AMSFront
+  434  git -v
+  435  git path
+  436  git add .
+  437  git commit -m 'update'
+  438  git push
+  439  git status
+  440  git pull
+  441  git pull
+  442  git status
+  443  git add .
+  444  git commit -m 'update'
+  445  git push
+  446  git add .
+  447  git commit -m 'update'
+  448  git push
+  449  cnpm install
+  450  npm run dev
+  451  git status
+  452  git pull
+  453  git status
+  454  git pull 
+  455  git status 
+  456  git add .
+  457  git commit -m 'update'
+  458  git pull 
+  459  git status 
+  460  npm run dev
+  461  git status
+  462  git add .
+  463  git commit -m 'bug修复'
+  464  git push
+  465  npm run dev
+  466  git pull
+  467  git status
+  468  git pull
+  469  git status
+  470  git add .
+  471  git commit -m 'update'
+  472  git push
+  473  git puch
+  474  git pull
+  475  npm run dev
+  476  cnpm install -S js-md5
+  477  npm run dev
+  478  npm run dev
+  479  npm run dev
+  480  npm run dev
+  481  npm run dev
+  482  npm run dev
+  483  npm run dev
+  484  git add .
+  485  git commit -m 'update'
+  486  git status
+  487  git push
+  488  git config --list
+  489  clearr
+  490  clear
+  491  git config --global user.name Cicada-lively
+  492  cd /f/study/ES6
+  493  git init
+  494  ls
+  495  touch 1.text
+  496  touch 1.txt
+  497  cat 1.txt
+  498  vm
+  499  vi 1.txt
+  500  vi 1.txt
+  501  vi 1.txt
+  502  cat 1.txt
+  503  git status
+  504  git add -A
+  505  git status
+  506  git commit 
+  507  git commit 'init commit'
+  508  git commit -m'init commit'
+  509  git status
+  510  git log
+  511  git diff
+  512  git diff --cached
+  513  git diff master
+  514  git add .
+  515  git add .
+  516  git status
+  517  git checkout .
+  518  cat git\345\255\246\344\271\240/git.html
+  519  git status
+  520  git checkout 1.txt
+  521  cat 1.txt
+  522  git add .
+  523  cat 1.txt
+  524  git status
+  525  clear
+  526  git reset HEAD 1.txt
+  527  git status
+  528  git checkout 1.txt
+  529  cat 1.txt
+  530  history >2.txt

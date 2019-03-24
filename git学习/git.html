@@ -54,7 +54,7 @@
         git rm --cached .  -r  删除暂存区  <br/> 
         每一个版本对应一个版本号 <br/>
         工作区到版本库   git commit -a -m '提交内容'  前提是这个文件需要提交过一次
-        
+
 
         <b>三种比较方法</b> <br/>
         工作区和暂存区比较     git diff <br/>
@@ -63,12 +63,18 @@
 
         撤销
         从暂存区中将工作内容覆盖掉  git checkout  文件名 <br/>
-        暂存区回滚到上一次    git reset HEAD
-        
-
-        
-        
+        暂存区回滚到上一次    git reset HEAD 文件名 <br/>
+        回滚历史版本    git reset --hard 版本号 <br/>
+                       git relog   查看所有版本 <br/>
     </p>
+    <h5>创建分支</h5>
+    git branch  查看分支 <br/>
+    git branch 分支名 创建分支 <br/>
+    git checkout 分支名  切换分支 <br/>
+    git branch -D 分支名   删除分支 <br/>
+    删除分支时，当前用户不能再当前要删除的分支上 <br/>
+    git checkout -b dev  创建并且切换分支  <br/>
+
 </section>
    
 
