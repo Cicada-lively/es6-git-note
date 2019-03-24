@@ -5,41 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>git简介</title>
+    <style>
+        *{
+            font-family: Microsoft Yahei;
+        }
+    </style>
 </head>
 <body>
-    分布式
-    svn(集中式) 需要一台中央服务器
-    git的区别
-    速度比svn 快
-    SVN中每个文件夹都有一个文件.svn文件，git有一个单独的文件.git文件夹
+    <section>
+        git分布式
+        svn(集中式) 需要一台中央服务器
+        <b>git的区别</b>
+        速度比svn 快 <br/>
+        SVN中每个文件夹都有一个文件.svn文件，git有一个单独的文件.git文件夹 <br/>
+    </section>
     
-    配置用户 （不配置用户不能提交代码）
-    git config --list
-    git config --global user.name '名字'
-    git config --global user.email '邮箱'
+    <section>
+        <h5>配置用户 （不配置用户不能提交代码）</h5>
+        git config --list<br/>
+        git config --global user.name '名字'<br/>
+        git config --global user.email '邮箱'<br/>
+    </section>
+   
+    <section>
+        <h5>Linux 命令</h5>
+        pwd  打印当前目录  print working directory<br/>
+        mkdir 文件夹名     创建目录<br/>
+        touch 文件       创建文件<br/>
+        cat 文件名<br/>
+        vi 文件名<br/>
+            i: 插入模式   esc推出编辑模式  :q! 强制退出  :wq  保存并退出<br/>
+        cd 目录   进入目录<br/>
+        进入D盘  cd d:<br/>
+        rm -rf * 暴力删除所有文件 <br/>
+        rm -rf 文件夹    删除文件 <br/>
+        rm 文件名    删除文件 <br/>
+        ls -al  显示目录下所有的文件 <br/>
+    </section>
+    
+<section>
+    <h5>初始化git</h5>
+    <p>不要在子文件夹里初始化 <br/>
+        一个项目初始化一次，不能嵌套 <br/>
+        git init 告诉git那个文件夹被git所管理 <br/>
+        git add .或者 -A  存放到暂存区 <br/>
+        git commit -m '消息'  存放到历史区 <br/>
+        git status 查看git状态   红色表示在工作区   暂存区是绿色   历史去没有颜色 <br/>
+        git rm --cached .  -r  删除暂存区  <br/> 
+        每一个版本对应一个版本号 <br/>
+        工作区到版本库   git commit -a -m '提交内容'  前提是这个文件需要提交过一次
+        
 
-    Linux 命令
-    pwd  打印当前目录  print working directory
+        <b>三种比较方法</b> <br/>
+        工作区和暂存区比较     git diff <br/>
+        工作区和历史库比较     git diff master <br/>
+        暂存区和历史区比较     git diff --cached <br/>
 
-    初始化git
-    不要在子文件夹里初始化
-    一个项目初始化一次，不能嵌套
-    rm -rf * 暴力删除所有文件
-    rm -rf 文件夹    删除文件
-    rm 文件名    删除文件
-    ls -al  显示目录下所有的文件
-    
-    
-    mkdir 文件夹名     创建目录
-    touch 文件       创建文件
-    cat 文件名
-    vi 文件名
-        i: 插入模式   esc推出编辑模式  :q! 强制退出  :wq  保存并退出
-    cd 目录   进入目录
-    进入D盘  cd d:
+        撤销
+        从暂存区中将工作内容覆盖掉  git checkout  文件名 <br/>
+        暂存区回滚到上一次    git reset HEAD
+        
 
-    git init 告诉git那个文件夹被git所管理
-    
+        
+        
+    </p>
+</section>
+   
+
+
 
 </body>
 </html>
