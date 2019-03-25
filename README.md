@@ -90,7 +90,13 @@
     推送代码
     git push origin master
     
-    测试数据
+    拉去最新的代码
+    git pull origin master
+
+    ## gh-pages 分支发布我们的静态页
+    - 在项目中创建一个 gh-pages的分支
+    - 将分支提到线上仓库里面
+    - 找到提供给你的网址
     
 
 
