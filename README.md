@@ -79,5 +79,15 @@
     - 创建一个 .gitignore 
     - git不会上传空文件夹 添加 .gitkeep 在空文件夹内
     
+    ## 关联远程
+    git remote add origin 地址
+
+    ## 删除关联
+    
+    git remote rm 名字
+
+    推送代码
+    git push origin master
+    
 
 
