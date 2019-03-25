@@ -96,7 +96,14 @@
     ## gh-pages 分支发布我们的静态页
     - 在项目中创建一个 gh-pages的分支
     - 将分支提到线上仓库里面
-    - 找到提供给你的网址
+    - 找到提供给你的网址  settings github-pages
+    ```
+    git checkout -b gh-pages
+    touch index.html
+    git add .
+    git commit -m 'update'
+    git push origin gh-pages
+    ```
     
 
 
