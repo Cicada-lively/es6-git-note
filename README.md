@@ -79,5 +79,7 @@
     - 创建一个 .gitignore 
     - git不会上传空文件夹 添加 .gitkeep 在空文件夹内
     
+    拉去
+    
 
 
