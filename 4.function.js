@@ -38,6 +38,38 @@ let obj = {
 }
 obj.fn()
 
+// 函数
+// 箭头函数  ()=>{}
+// 1.如果只有一个参数的时候，可以省略圆括号，
+// 2.如果只有一个return，可以省略花括号
+// 只是一个简写
+
+//函数的参数
+/*
+1.参数的扩展/数组的展开
+2.默认参数
+
+参数的扩展
+1.收集剩余的参数
+  ...args 必须是最后一个
+2.展开数组
+展开后的效果，跟直接把数组的内容写在这一样  
+
+*/ 
+
+// function sum(a,b,...args) {
+//     alert(a)
+//     alert(b)
+//     alert(args)
+// }
+// sum(12,15,8,9,10,9)
+let arr = [1,2,3]
+function show(a,b,c){
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+show(...arr)
 
 
 

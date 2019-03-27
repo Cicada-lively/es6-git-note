@@ -20,6 +20,19 @@ let arr=[{name:'zfpx',age:'9'},'回龙观',{age:'9'}]
 let [,address,{age}] = arr
 console.log(address, age)
 
+// 解构赋值
+/*
+    1.左右两边结构必须一样
+    2.右边必须是个东西
+    3.声明和赋值不能分开（必须写在一个）
+
+*/
+
+let arr = [1,2,3]
+let [a,b,c] = arr
+console.log(a,b,c)
+let {a,b,c} = {a:12,b:7,c:4}
+
 
 
 

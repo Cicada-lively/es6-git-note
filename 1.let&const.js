@@ -34,7 +34,7 @@ const school = {name : 'zfpx'}
 school.name = 'zf'
 console.log(school)
 
-
+k
 for(var i = 0; i<3;i++) {
     (function (i){
         setTimeout(function(){
@@ -42,6 +42,13 @@ for(var i = 0; i<3;i++) {
         })
     })(i)
 }
+
+// var 
+// 可以重复声明
+// 无法限制修改
+// 没有块级作用域
+// let  不能重复声明   变量-可以修改    块级作用域
+// const 不能重复声明  常量 - 不可以修改  块级作用域
 
 
 
