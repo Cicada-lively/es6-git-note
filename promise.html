@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise概念</title>
+</head>
+<body>
+    1.Promise是一个构造函数，通过 new Promise()来创建一个实例对象
+    2.在Promise 中有两个函数，一个是resolve(成功之后的回调)，一个是reject（失败之后的回调）
+    3.在Promise的构造函数 prototype属性上有一个 .then()方法，也就是说只要是Promise 创建的实例，都是可以调用 .then()方法的
+    4.Promise是一个异步的操作，每当我们new 一个Promise的实例，这个实例就表示一个具体的异步操作
+    5.既然Promise创建的实例是一个异步操作，那么这个异步操作的结果有两种状态
+      5.1 状态1，异步执行成功了  需要在内部调用成功的函数 resolve()
+      5.2 状态2，异步执行失败了  需要在内部调用失败的函数 reject()
+      5.3 由于Promise的实例是一个异步操作，所以内部拿到操作结果后，无法使用return 把操作结果返回给调用者，
+      这时候，只能使用回调函数的形式，来把成功或者失败的结果返回给调用者
+    6.我们可以在new出来的Promise实例上调用 then()方法，预先为这个Promise异步操作，指定成功(resolve)和失败(reject)回调函数
+
+
+</body>
+<script>
+    const fs = require('fs')
+    // 这是一个具体的异步操作，其中，使用function指定一个具体的异步操作
+    // 每当 new 一个Promise 实例的时候，就会立即执行这个 异步操作中的代码
+    // 也就是说，new的时候，除了能够得到一个 Promise 实例之外，还会立即调用我们为 promise构造函数传递的那个 function ，执行这个function中的异步操作代码
+
+    let promise = new Promise(function(){
+        // 这个function 内部写的就是具体的异步操作
+        fs.readFile('./1.txt','utf-8',(err,dataStr)=>{
+            if (err) throw err
+            console.log(dataStr)
+        })
+    })
+</script>
+</html>

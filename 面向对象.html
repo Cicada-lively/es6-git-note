@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 类和构造函数是一样的
+        function User(name, pass){
+            this.name = name;
+            this.pass = pass
+        }    
+        User.prototype.showName = function(){
+            alert(this.name)
+        }
+        User.prototype.showPass = function(){
+            alert(this.pass)
+        }
+        var u1 = new User('zhangsan','123456')
+
+        // 继承的写法
+        function VipUser(name,pass,level){
+            User.call(this,name,pass)
+            this.level = level;
+        }
+        VipUser.prototype = new User();
+        VipUser.prototype.constructor = VipUser;
+        VipUser.prototype.showLevel = function(){
+            alert(this.level)
+        }
+        let v1 = new VipUser('lisi', '3214','10')
+        v1.showName()
+        v1.showPass()
+        v1.showLevel()
+    </script>
+</body>
+</html>

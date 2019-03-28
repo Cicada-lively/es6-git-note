@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise</title>
+</head>
+<body>
+    <p>Promise - 承诺</p>
+    异步：操作之间没有关系，同时进行多个操作
+    同步：同时只能做一件事情
+    ajax 请求  如果页面不回来，页面卡死
+    异步：代码更复杂
+    同步：代码简单
+
+    Promise-消除异步操作
+    用同步一样的方式，来写异步代码
+    Promise到底怎么用
+    Promise.all([$.ajax('./1.txt',dataType: 'json'),$.ajax('./1.txt',dataType: 'json')]).then(result=>{},err=>{})
+    <p>
+        Promise.all
+        Promise.race  竞速
+        Promise.race([
+            $.ajax({url:'http://www.baidu.com/user'}),
+            $.ajax({url:'http://www.baidu1.com/user'}),
+            $.ajax({url:'http://www.baidu2.com/user'}) 
+        ])
+    </p>
+    <script>
+        let p = new Promise()
+    </script>
+
+</body>
+</html>

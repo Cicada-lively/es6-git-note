@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>json</title>
+</head>
+<body>
+    <p>json变为字符串 JSON.stringify()</p>
+        JSON.parse()
+    json的标准写法：
+    1.只能用双引号
+    2.所有的名字都必须用引号包起来  {"a":12,"b":5}
+    <p>
+        json的简写:名字和值一样的话可以只写一个
+        方法简写  :function 一块删除
+        show :function(){}
+        show(){}
+    </p>
+
+    <script>
+        let json = '{"a":12,"b":5}'
+        // let str = 'http://www.baidu.com?data='+encodeURIComponent(JSON.stringify(json))
+        // alert(str)    
+        let str = JSON.parse(json)
+        // console.log(str)
+        // let a = 12;
+        // let b = 10;
+        // let json1 = {a,b}
+        // console.log(json1)
+        let json = {
+            a:12,
+            show(){
+                consle.log(11)
+            }
+        }
+    </script>
+</body>
+</html>

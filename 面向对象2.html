@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        ES6面向对象
+        1.class关键字，构造器和类是分开的了
+        2.class里面直接加方法
+
+        继承：
+        super——超类==父类
+
+        面向对象应用 - React
+        1.模块化（组件化）——class
+        2.JSX
+        JSX==babel==brower.js
+
+    </p>
+
+    <script>
+        // 类和构造函数是一样的
+    //    class User{
+    //        constructor(name, pass){
+    //         this.name = name;
+    //         this.pass = pass
+    //        }
+    //        showName(){
+    //            alert(this.name)
+    //        }
+    //        showPass(){
+    //            alert(this.pass)
+    //        }
+    //    }
+    //     var u1 = new User('zhangsan','123456')
+        
+    //     class VipUser extends User{
+    //         constructor(name,pass,level){
+    //             super(name,pass)
+    //             this.level = level
+    //         }
+    //         showLevel(){
+    //             alert(this.level)
+    //         }
+    //     }
+    //     let v1 = new VipUser('hangzi','1234','10')
+    //     v1.showName()
+    //     v1.showLevel()
+    class User{
+        constructor(name,age){
+            this.name = name
+            this.age = age
+        }
+        showName(){
+            console.log(this.name)
+        }
+    }
+    class VipUser extends User{
+        constructor(name,age,color){
+            super(name,age)
+            this.color = color
+        }
+        showName(){
+            console.log(123+this.name)
+        }
+    }
+    let u = new User('zs','21')
+    u.showName();
+    let v = new VipUser('li','24','red')
+    v.showName()
+    </script>
+</body>
+</html>
