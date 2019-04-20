@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全局作用域下var带和不带的区别</title>
+</head>
+<body>
+    <p>在全局作用域当中，带var和不带var的关系</p>
+    <p>区别：带var 的可以进行预解释，所以在赋值的前面执行不会报错，不带var的是不能进行预解释的，在前面执行会报错</p>
+    <p>关系：num1=13,相当于给window增加了一个叫做num2的属性名，属性值是12</p>
+    <p>var num=12,首先它相当于全局作用与增加了一个全局变量num,但是不仅如此，，它也相当于给window增加了一个属性名为num,属性值为12</p>
+    
+  <script>
+    // console.log(num)
+    // var num = 12
+
+    // console.log(num1)  //Uncaught ReferenceError: num1 is not defined
+    // num1= 13  
+    function fn() {
+      console.log(total)
+      var total = 100;
+    }
+    fn()
+    console.log(total)
+    // js中如果在不进行任何特殊处理的情况下，上面的代码报错，下面的代码都不执行了
+  </script>
+  
+</body>
+</html>

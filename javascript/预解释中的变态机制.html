@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>预解释中的变态机制</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    // 预解释是毫无节操的一种机制
+    // 自从学了预解释，从此节操是路人
+    // in: "num" in window 判断num是否为window这个对象的一个属性，是的话返回true,不是的话返回false
+    // var obj = {name: "张文静", age: 17}
+    // console.log("name" in obj); //->true
+    // console.log("age" in obj) //->false
+    // 1、预解释的时候不管你的条件是否成立，都要把带var的进行提前的声明
+    // window的预解释：var num->window.num
+    if(!("num" in window)) {
+      var num = 12;
+    }
+    console.log(num)  //undefined
+    // 2、预解释的时候只预解释"="左边的，右边的是值，不参与预解释
+    // 匿名函数之函数表达式：把函数定义的部分当做一个值赋值给我们的变量/元素的某一个事件
+    // window 下的预解释：var fn;
+    fn() //->undefined() fn is not a function
+    var fn=function(){
+      console.log('ok')
+    }
+    fn() //->"ok"
+    function fn(){
+      console.log('ok')
+    }
+    fn()
+  </script>
+</body>
+</html>
