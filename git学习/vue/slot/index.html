@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slot</title>
+</head>
+<body>
+  <h3>slot内容分发</h3>
+  <p>本意： 位置，槽</p>
+  <p>作用：用来获取组件之间的原内容</p>
+  <div id="app">
+    <my-hello></my-hello>
+  </div>
+  <template id="hello">
+    <div>
+      <h3>welcome to hello</h3>
+      <slot>如果没有原内容，则显示该内容</slot>
+    </div>
+  </template>
+  <script src="../vue2.js"></script>
+  <script>
+  let vm= new Vue({
+    el: "#app",
+    components: {
+      'my-hello': {
+        template: '#hello',
+        data(){
+          return {
+
+          }
+        },
+
+      }
+    }
+  })
+  </script>
+</body>
+</html>

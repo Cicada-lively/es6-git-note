@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue-router用法</title>
+</head>
+<body>
+  vue.js开发SPA，单页面应用，
+  直观上只有一个页面，根据不同的url，显示不同的内容，但显示在同一个页面中，称为单页面应用
+  2.基本用法
+    布局
+
+  <div id="app">
+    <!-- 使用 router-link组件来定义导航，to属性指定链接url -->
+    <router-link to="/home">主页</router-link>
+    <router-link to="/news">新闻</router-link>
+    <div>
+      <router-view></router-view>
+    </div>
+    
+  </div>
+
+  <script src="../vue2.js"></script>
+  <script src="vue-router.js"></script>
+  <script>
+    // 定义组件
+    var Home = {
+      template: '<p>我是组件</p>'
+    }
+    var News = {
+      template: '<p>我是新闻</p>'
+    }
+    // 2.配置路由
+    const routes = [
+      {path: '/home', component: Home},
+      {path: '/news', component: News}
+    ]
+    // 3.创建路由实例
+    const router = new VueRouter({
+      routes: routes
+    })
+    let vm = new Vue({
+      el: "#app",
+      router,
+      components: {
+
+      }
+    })
+  </script>
+</body>
+</html>

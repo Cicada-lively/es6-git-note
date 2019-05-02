@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>非父子组件之间的通讯</title>
+</head>
+<body>
+  Event.$emit('事件名',数据)
+  Event.$on('事件名',data=>{})
+  <div id="app">
+    <tem-a></tem-a>
+    <tem-b></tem-b>
+    <tem-c></tem-c>
+  </div>
+  <template id="tem-a">
+    <div >
+      <h3>A组件</h3>
+      {{name}}
+      <button @click="send">组件A-C</button>
+    </div >
+  </template>
+  <template id="tem-b">
+    <div>
+      <h3>B组件</h3>
+      {{age}}
+    </div>
+  </template>
+  <template id="tem-c">
+    <div>
+      <h3>C组件</h3>
+      {{name}}
+      {{age}}
+    </div>
+  </template>
+
+  <script src="../vue2.js"></script>
+  <script>
+    // 定义一个空的Vue实例
+    var Event = new Vue()
+     var A = {
+        template: '#tem-a',
+        data(){
+          return {
+            name: 'tom'
+          }
+        },
+        methods: {
+          send(){
+            Event.$emit('data-a',this.name)
+          }
+        }
+      }
+    var B = {
+          template: '#tem-b',
+          data(){
+            return {
+              age: '18'
+            }
+          },
+          methods: {
+
+          },
+          mounted(){
+            Event.$emit('data-b',this.age)
+          }
+        }
+      var C = {
+        template: '#tem-c',
+        data(){
+          return {
+            name1: 'aa',
+            name: '',
+            age: ''
+          }
+        },
+        methods: {
+
+        },
+        created(){
+          Event.$on("data-b",age=>{
+            this.age = age
+          })
+        },
+        mounted(){  //在模板编译完成后执行
+          Event.$on('data-a',name=>{
+            console.log(this)
+            this.name = name
+          })
+        }
+      }
+    let vm = new Vue({
+      el: "#app",
+      data:{},
+      components: {
+        'temA': A,
+        'temB': B,
+        'temC': C
+      }
+    })
+  </script>
+</body>
+</html>
