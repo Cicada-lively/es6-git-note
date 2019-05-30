@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>高阶函数</title>
+</head>
+<body>
+  判断类型 Object.prototype.toString.call()
+
+  <script>
+    //  function isType(obj,type){
+    //    return Object.prototype.toString.call(obj).includes(type)
+    //  }
+
+    function isType(type){
+      return function(obj){
+        return Object.prototype.toString.call(obj).includes(type)
+      }
+    }
+    //  包装成一个高阶函数，批量生成函数
+    let types = ['String','Object','Array','Null','Undefined','Boolean'];
+    let fns = {}
+    types.forEach(type=>{
+      fns["is"+type] = isType(type)
+    })
+
+    let a= true
+    console.log(fns.isBoolean(a))  //函数柯力化
+
+  </script>
+</body>
+</html>

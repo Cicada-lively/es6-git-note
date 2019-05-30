@@ -49,7 +49,6 @@ function deepClone(parent,c){   //parent要拷贝的对象
             if(typeof val === 'object'){
                 child[key] = Object.prototype.toString.call(val) === '[object Array]'?[]:{}
                 deepClone(parent[key],child[key])
-
             }else{
                 child[key] = parent[key]   //处理普通属性的
             }
